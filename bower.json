@@ -1,0 +1,22 @@
+{
+  "name": "countdown",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Spy-Seth/countdown",
+  "authors": [
+    "Armand Abric <armand.abric@virtual-expo.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "countdown": "https://github.com/kbwood/countdown.git#~2.0.0",
+    "jquery": "~2.1.0"
+  }
+}

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Countdown</title>
+        <link rel="stylesheet" href="./bower_components/countdown/jquery.countdown.css">
+        <style>
+            body {
+                background-color: black;
+            }
+            #defaultCountdown {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: 450px;
+                height: 50px;
+                border: none;
+                background-color: transparent;
+            }
+
+            #defaultCountdown span {
+                display: block;
+                float: left;
+                width: 34px;
+                height: 50px;
+                background: url('./bower_components/countdown/countdownGlowing.gif') no-repeat 0px 0px;
+            }
+
+            #defaultCountdown span.image0 { background-position: -0px 0px; }
+            #defaultCountdown span.image1 { background-position: -34px 0px; }
+            #defaultCountdown span.image2 { background-position: -68px 0px; }
+            #defaultCountdown span.image3 { background-position: -102px 0px; }
+            #defaultCountdown span.image4 { background-position: -136px 0px; }
+            #defaultCountdown span.image5 { background-position: -170px 0px; }
+            #defaultCountdown span.image6 { background-position: -204px 0px; }
+            #defaultCountdown span.image7 { background-position: -238px 0px; }
+            #defaultCountdown span.image8 { background-position: -272px 0px; }
+            #defaultCountdown span.image9 { background-position: -306px 0px; }
+            #defaultCountdown span.imageDay { background-position: -340px 0px; }
+            #defaultCountdown span.imageSep { background-position: -374px 0px; }
+            #defaultCountdown span.imageSpace { background-position: -408px 0px; }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="defaultCountdown"></div>
+
+        <script src="./bower_components/jquery/jquery.js"></script>
+        <script src="./bower_components/countdown/jquery.plugin.js"></script>
+        <script src="./bower_components/countdown/jquery.countdown.js"></script>
+        <script src="./bower_components/countdown/jquery.countdown-fr.js"></script>
+
+        <script>
+            $(function() {
+                $('#defaultCountdown').countdown({
+                    until: new Date('2014-03-28T12:30:00'),
+                    compact: true,
+                    layout: ''
+                            + '<span class="image{d10}"></span><span class="image{d1}"></span>'
+                            + '<span class="imageDay"></span><span class="imageSpace"></span>'
+                            + '<span class="image{h10}"></span><span class="image{h1}"></span>'
+                            + '<span class="imageSep"></span>'
+                            + '<span class="image{m10}"></span><span class="image{m1}"></span>'
+                            + '<span class="imageSep"></span>'
+                            + '<span class="image{s10}"></span><span class="image{s1}"></span>'
+                });
+            });
+        </script>
+    </body>
+</html>
