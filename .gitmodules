@@ -1,0 +1,3 @@
+[submodule "countdown"]
+	path = countdown
+	url = git@github.com:Spy-Seth/countdown.git
